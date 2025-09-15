@@ -1,0 +1,604 @@
+/* styles.css - Enhanced Stylish Version for Naoki Urasawa Tribute Page */
+:root {
+  --color-primary: #909090;
+  --color-secondary: #b6bcbc;
+  --color-bg-gradient-start: #ffffff;
+  --color-bg-gradient-end: #7c7e81;
+  --color-text-primary: #222;
+  --color-text-secondary: #a4a4a4;
+  --color-white: #ffffff;
+  --border-radius: 20px;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Temel Ayarlar */
+body {
+  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.6;
+  transition: background var(--transition-speed) ease;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: var(--color-primary);
+  color: var(--color-white);
+  padding: 3rem 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+ 
+}
+
+#header-img {
+  max-width: 10%;
+    height: auto;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    background-color: #000000;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+header p {
+    background-color: #4d4c4c;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Main Container */
+#main {
+  background: var(--color-white);
+  background: #ffffffdd;
+  width: 85%;
+  max-width: 1000px;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform var(--transition-speed) ease;
+}
+
+#main:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Gallery Container */
+#img-div {
+  margin-bottom: 2.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: #ffffff;
+  padding: 1rem;
+
+  /* Flexbox for multiple images */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Images */
+#img-div img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border: 5px solid var(--color-white);
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+
+
+/* Caption */
+#img-caption {
+  margin-top: 0.8rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Tribute Info */
+#tribute-info {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  text-align: justify;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* Link Button */
+#tribute-link {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(92, 92, 92, 0.5);
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+#tribute-link:hover,
+#tribute-link:focus {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(109, 109, 109, 0.8);
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: inset 0 1px 5px rgba(255,255,255,0.1);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  #img-div {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  #main {
+    width: 95%;
+    padding: 1.5rem 1.5rem;
+  }
+
+  #tribute-info {
+    font-size: 1rem;
+  }
+
+  #tribute-link {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  #img-div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #img-div img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+/* Manga Gallery Section */
+#manga-gallery {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+   flex-wrap: wrap;
+}
+
+#manga-gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Manga List Grid */
+.manga-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Manga Item */
+.manga-item {
+  background: var(--color-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  cursor: default;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* container eşitlemek için */
+  box-sizing: border-box;
+}
+
+.manga-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.manga-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.manga-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.manga-item p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .manga-item img {
+    height: 220px;
+  }
+}
+
+#biography {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#biography h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid var(--color-primary);
+}
+
+.timeline li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+#quotes {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  font-style: italic;
+  color: var(--color-primary);
+  background: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#quotes h2 {
+  margin-bottom: 1.5rem;
+}
+
+#quotes blockquote {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  quotes: "“" "”" "‘" "’";
+}
+
+#quotes blockquote::before {
+  content: open-quote;
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.4em;
+  color: var(--color-secondary);
+}
+
+#quotes blockquote::after {
+  content: close-quote;
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.4em;
+  color: var(--color-secondary);
+}
+
+#video-section {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#contact {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+#contact form input,
+#contact form textarea {
+  width: 80%;
+  text-align: left;
+  padding: 0.8rem 1rem;
+   margin-right: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  resize: vertical;
+}
+
+#contact form button {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background var(--transition-speed) ease;
+}
+
+#contact form button:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* Hamburger ikonu her zaman görünsün */
+.menu-toggle {
+  background-color: #000000;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  max-width: 35px;
+  border-radius: 5px;
+}
+
+#nav-menu {
+  display: none; /* Başlangıçta gizli */
+    transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  top: 60px; /* ikonun altına tam denk gelsin diye ayarla */
+  left: 0;/* sağa yaslı */
+  background: #000000;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: fit-content;
+}
+
+#nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+   position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+#nav-menu a:hover {
+    color: #f39c12;
+  transform: translateX(5px);
+}
+
+#nav-menu.show {
+  display: flex; /* Menü açıldığında göster */
+    opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobil için */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Telefon/tablette göster */
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #333;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #nav-menu.show {
+    display: flex; /* Tıklanınca açılır */
+  }
+}
+
+.bat {
+  position: fixed;
+  left: -200px; /* ekranın solundan başlar */
+  display: block;
+  animation: across 12s linear infinite, float 6s ease-in-out infinite;
+}
+
+/* Her yarasa farklı yükseklikte ve gecikmeli */
+.bat:nth-child(1) { top: 200px; animation-delay: 0s, 0s; }
+.bat:nth-child(2) { top: 300px; animation-delay: 2s, 1s; }
+.bat:nth-child(3) { top: 400px; animation-delay: 4s, 2s; }
+.bat:nth-child(4) { top: 500px; animation-delay: 1s, 0.5s; }
+.bat:nth-child(5) { top: 600px; animation-delay: 3s, 1.5s; }
+
+@keyframes across {
+  0% { left: -200px; }
+  100% { left: 2000px; } /* ekranın sağından çıkar */
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Aynı anda sağa dönük olmasını istiyorsan */
+.bat img {
+  width: 400px; /* boyutu küçültebilirsin */
+  height: auto;
+    transform: scaleX(-1); /* yatay çevir */
+    z-index: 999;
+}
+
+
+.manga-item a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1rem;
+  background-color: #0d1b2a;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+  max-width: 100%; /* container genişliğine sığdırır */
+  text-align: center;
+  white-space: nowrap; /* satırın kaymasını engeller */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.manga-item a:hover {
+  background-color: #b6bcbc;
+  color: #0d1b2a;
+  transform: translateY(-2px);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #0d1b2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+#manga-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+#manga-search:focus {
+  outline: none;
+  border-color: #0d1b2a;
+  box-shadow: 0 0 5px rgba(13, 27, 42, 0.5);
+}
+
+
+
+
+
